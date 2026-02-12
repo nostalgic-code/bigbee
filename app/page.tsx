@@ -4,7 +4,6 @@ import WhatWeDo from "@/components/WhatWeDo";
 import ValuesSection from "@/components/ValuesSection";
 import TechnologySection from "@/components/TechnologySection";
 import HowWeWork from "@/components/HowWeWork";
-import Newsroom from "@/components/Newsroom";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
@@ -18,7 +17,6 @@ export default function Home() {
         <ValuesSection />
         <TechnologySection />
         <HowWeWork />
-        <Newsroom />
         <CTASection />
       </main>
       <Footer />

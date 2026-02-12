@@ -99,11 +99,11 @@ export default function Header({ darkText = false }: HeaderProps) {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 z-50 px-6 py-5 flex items-center justify-between transition-all duration-300 ${
+      <header className={`fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-5 flex items-center justify-between transition-all duration-300 ${
         scrolled && !menuOpen ? 'bg-[#f5f5f5] backdrop-blur-md shadow-lg' : ''
       }`}>
-        <Link href="/" className={`font-mono text-sm tracking-[0.2em] font-semibold transition-colors duration-300 ${menuOpen || scrolled || darkText ? 'text-dark' : 'text-white'}`}>
-          Big<span className="text-[#fedb5b]">Bee</span>Logistics<sup className="text-[10px]">®</sup>
+        <Link href="/" className={`font-mono text-[10px] sm:text-sm tracking-[0.15em] sm:tracking-[0.2em] font-semibold transition-colors duration-300 ${menuOpen || scrolled || darkText ? 'text-dark' : 'text-white'}`}>
+          Big<span className="text-[#fedb5b]">Bee</span>Logistics<sup className="text-[8px] sm:text-[10px]">®</sup>
         </Link>
 
         {/* Hamburger Menu / Close Button */}
@@ -171,20 +171,6 @@ export default function Header({ darkText = false }: HeaderProps) {
                       <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-dark transition-all duration-300 group-hover:w-full" />
                     </Link>
                   </div>
-                  <div className="flex flex-col gap-4">
-                    <Link href="#platform" className="group relative text-dark text-2xl md:text-3xl font-sans transition-all duration-300 hover:translate-x-2" onClick={() => setMenuOpen(false)}>
-                      Platform
-                      <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-dark transition-all duration-300 group-hover:w-full" />
-                    </Link>
-                    <Link href="#newsroom" className="group relative text-dark text-2xl md:text-3xl font-sans transition-all duration-300 hover:translate-x-2" onClick={() => setMenuOpen(false)}>
-                      Newsroom
-                      <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-dark transition-all duration-300 group-hover:w-full" />
-                    </Link>
-                    <Link href="#careers" className="group relative text-dark text-2xl md:text-3xl font-sans transition-all duration-300 hover:translate-x-2" onClick={() => setMenuOpen(false)}>
-                      Careers
-                      <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-dark transition-all duration-300 group-hover:w-full" />
-                    </Link>
-                  </div>
                 </div>
               </div>
 
@@ -192,13 +178,13 @@ export default function Header({ darkText = false }: HeaderProps) {
               <div ref={contactSectionRef}>
                 <p className="font-mono text-[10px] tracking-[0.15em] text-dark/60 mb-6">CONTACT</p>
                 <div className="flex flex-col gap-3">
-                  <Link
-                    href="#contact"
+                  <a
+                    href="mailto:info@bigbeelogistics.co.za"
                     className="inline-flex items-center justify-center px-6 py-3 bg-dark text-white font-sans text-sm hover:bg-dark/90 transition-all"
                     onClick={() => setMenuOpen(false)}
                   >
                     Send Us A Message
-                  </Link>
+                  </a>
                   <button
                     className="inline-flex items-center justify-center px-6 py-3 bg-[#fedb5b] text-dark font-sans text-sm hover:bg-[#fedb5b]/80 transition-all"
                     onClick={() => { setMenuOpen(false); setQuoteModalOpen(true); }}
@@ -235,12 +221,6 @@ export default function Header({ darkText = false }: HeaderProps) {
                       <rect x="2" y="2" width="20" height="20" rx="5" />
                       <circle cx="12" cy="12" r="4" />
                       <circle cx="18" cy="6" r="1" fill="currentColor" />
-                    </svg>
-                  </a>
-                  <a href="#" className="w-10 h-10 border border-dark/20 flex items-center justify-center hover:bg-dark/5 transition-colors" aria-label="YouTube">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-dark">
-                      <rect x="2" y="4" width="20" height="16" rx="4" />
-                      <polygon points="10,8 16,12 10,16" fill="currentColor" />
                     </svg>
                   </a>
                 </div>
