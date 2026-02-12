@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import gsap from "gsap";
 import QuoteModal from "./QuoteModal";
 
@@ -102,8 +103,15 @@ export default function Header({ darkText = false }: HeaderProps) {
       <header className={`fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-5 flex items-center justify-between transition-all duration-300 ${
         scrolled && !menuOpen ? 'bg-[#f5f5f5] backdrop-blur-md shadow-lg' : ''
       }`}>
-        <Link href="/" className={`font-mono text-[10px] sm:text-sm tracking-[0.15em] sm:tracking-[0.2em] font-semibold transition-colors duration-300 ${menuOpen || scrolled || darkText ? 'text-dark' : 'text-white'}`}>
-          Big<span className="text-[#fedb5b]">Bee</span>Logistics<sup className="text-[8px] sm:text-[10px]">®</sup>
+        <Link href="/" className="transition-opacity duration-300 hover:opacity-80">
+          <Image
+            src="/BigBeeLogistics-03.png"
+            alt="BigBeeLogistics"
+            width={280}
+            height={100}
+            className="h-16 sm:h-20 md:h-24 w-auto"
+            priority
+          />
         </Link>
 
         {/* Hamburger Menu / Close Button */}
@@ -238,9 +246,13 @@ export default function Header({ darkText = false }: HeaderProps) {
 
               {/* BigBeeLogistics Logo */}
               <div className="md:self-center">
-                <span className="font-mono text-2xl tracking-[0.15em] font-semibold text-dark">
-                  Big<span className="text-[#fedb5b]">Bee</span>Logistics<sup className="text-xs">®</sup>
-                </span>
+                <Image
+                  src="/BigBeeLogistics-03.png"
+                  alt="BigBeeLogistics"
+                  width={360}
+                  height={120}
+                  className="h-28 w-auto"
+                />
               </div>
             </div>
           </div>
