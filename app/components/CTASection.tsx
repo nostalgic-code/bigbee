@@ -16,7 +16,7 @@ export default function CTASection() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('https://framerusercontent.com/images/cdkra1msE338pRZAmYqBqbSgQ.jpg?scale-down-to=2048&width=3000&height=1999')`,
+          backgroundImage: `url('https://framerusercontent.com/images/q7ovq9XPzUbvhCNfkFPPkWTTxw.jpg?scale-down-to=2048&width=3000&height=1557')`,
         }}
       />
 

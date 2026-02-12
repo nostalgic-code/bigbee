@@ -310,7 +310,7 @@ export default function ServicesPage() {
       {/* CTA Section */}
       <section className="relative py-20 md:py-32 px-6 md:px-10 overflow-hidden">
         <Image
-          src="https://framerusercontent.com/images/cdkra1msE338pRZAmYqBqbSgQ.jpg?scale-down-to=2048&width=3000&height=1999"
+          src="https://framerusercontent.com/images/q7ovq9XPzUbvhCNfkFPPkWTTxw.jpg?scale-down-to=2048&width=3000&height=1557"
           alt="CTA background"
           fill
           className="object-cover"
